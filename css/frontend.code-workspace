@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "frontendrepository",
+			"path": "../../repos/frontendrepository"
+		}
+	],
+	"settings": {}
+}
