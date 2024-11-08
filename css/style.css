@@ -14,13 +14,13 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background: #fff;
+    background: #2c2c2c;
     overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
-    color: #333;
+    color: var(--light-color);
 }
 
 ul {
@@ -33,7 +33,7 @@ img {
 
 /* Navbar */
 .navbar {
-    background: #fff;
+    background: #2c2c2c;
     padding: 20px;
 }
 
@@ -69,23 +69,62 @@ img {
 
 /* Hero classes */
 .hero{
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
 
-.hero .container {
-    background: url('../images/hero-bg.png') no-repeat;
-    background-size: contain;
-    background-position: center bottom;
-    height: 550px;
+/* .hero .container { */ */
+    /* background: url('../images/hero-bg.png') no-repeat;  */
+    /* background-size: contain; */
+    /* background-position: center bottom; */
+/* } */
 
+.hero .hero-heading{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.hero .hero-heading1{
+    vertical-align: center;
+}
+
+.hero .hero-heading2{
+    vertical-align: center;
+    color: #FFCE1B;
+}
+
+.hero .hero-image-face {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    width: 50%;
+    border-radius: 50%;
+}
+
+.hero .hero-image {
+    padding-bottom: 35px;
 }
 
 .hero .hero-content{
-    width: 70%;
+    width: 100%;
 }
 
 .hero .hero-text{
     width: 70%;
+    color: var(--light-color);
+}
+
+
+/* More About */
+.more-about {
+    padding-bottom: 20px;
+}
+.more-about-content{
+    text-align: center;
+}
+
+.btn-more-about{
+    font-size: 1.5rem;
 }
 
 /* Video */
@@ -401,7 +440,7 @@ img {
 .hamburger-button .hamburger-line {
     width: 30px;
     height: 3px;
-    background: #333;
+    background: var(--light-color);
     margin: 6px 0;
 }
 
@@ -446,7 +485,7 @@ img {
     }
 }
 
-@media (max-width: 670px) {
+@media (max-width: 675px) {
 
     /* Navbar */
     .navbar .main-menu {
@@ -459,7 +498,7 @@ img {
 
     /* Hero */
     .hero .container {
-        background: url('../images/hero-bg-mobile.png') no-repeat;
+        /* background: url('../images/hero-bg-mobile.png') no-repeat; */
         background-size: 350px;
         background-position: bottom;
         height: 770px;
@@ -468,6 +507,8 @@ img {
     .hero .hero-content, 
     .hero .hero-text {
         width: 100%;
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
     }
 
