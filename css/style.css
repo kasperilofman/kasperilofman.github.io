@@ -181,10 +181,44 @@ img {
 
 .parallax .parallax-p{
     text-align:center;
-    padding: 10px 80px 50px;
+    padding: 10px 50px 20px;
     background-color: var(--primary-color);
 }
 
+/* Careers */
+.careers {
+    padding: 40px 0;
+}
+
+.careers .careers-heading{
+    width: 700px;
+    margin-bottom: 40px;
+    color: var(--light-color);    
+}
+
+
+.careers-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.careers .card p:nth-child(2){
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.careers .card-img{
+    display:block;
+    height: 20vh;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.careers .careers-subheading{
+    text-align: center;
+}
 
 /* Testimonial */
 
@@ -591,12 +625,22 @@ img {
         width: 100%;
     }
 
+
     /* Testimonials */
+    .careers .careers-heading,
     .testimonials .testimonials-heading {
         max-width: 100%;
         text-align: center;
     }
 
+    .careers .card {
+        width:auto;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .careers .careers-grid,
     .testimonials .testimonials-grid, 
     .pricing .pricing-grid,
     .footer .footer-grid {
@@ -604,6 +648,8 @@ img {
     }
 
     .footer .footer-grid > div {
+        margin-left: auto;
+        margin-right: auto;
         text-align: center;
     }
 
@@ -617,8 +663,4 @@ img {
     .text .text-md {
         font-size: 1.1rem;
     }
-}
-
-@media (max-width: 500px) {
-    
 }
