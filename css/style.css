@@ -161,7 +161,7 @@ img {
 /* Parallax */
 
 .parallax .pimg{
-    position:relative;
+    position: relative;
     background-position: center;
     background-size: cover;
     background-image: url("../images/00364-lut-forest-faces.jpg");
