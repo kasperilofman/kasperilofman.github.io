@@ -33,6 +33,19 @@ img {
     max-width: 100%;
 }
 
+/* TBA html files*/
+
+.tba-page .tba-container{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.tba-page .tba-heading {
+    text-align: center;
+    color: var(--light-color);
+}
+
 
 
 /* Navbar */
@@ -557,3 +570,4 @@ img {
         font-size: 1.1rem;
     }
 }
+
