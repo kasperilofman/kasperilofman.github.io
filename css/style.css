@@ -221,6 +221,9 @@ img {
     margin-top: 30px;
     font-weight: bold;
 }
+.careers .card {
+    min-width:max-content;
+}
 
 .careers .card-img{
     display:block;
@@ -228,6 +231,7 @@ img {
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto; 
+    min-width: fit-content;
 }
 
 .careers .careers-subheading{
@@ -494,7 +498,20 @@ img {
     .text-xxl {
         font-size: 2.5rem;
     }
+    .careers .careers-grid{
+        grid-template-columns: 1fr 1fr;
+    }
 }
+
+@media (max-width: 785px) {
+    .footer .footer-grid {
+        grid-template-columns: 1fr;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 
 @media (min-width: 675px) {
     .mobile-menu{
