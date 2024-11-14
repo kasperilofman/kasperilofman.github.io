@@ -8,13 +8,15 @@
     --primary-color: #4891ff;
     --light-color: #f4f4f4;
     --dark-color: #111;
+    --backgound-color: #2c2c2c;
+    --effect-yellow:#FFCE1B;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    background: #2c2c2c;
+    background: var(--backgound-color);
     overflow-x: hidden;
 }
 
@@ -33,7 +35,7 @@ img {
 
 /* Navbar */
 .navbar {
-    background: #2c2c2c;
+    background: var(--backgound-color);
     padding: 20px;
 }
 
@@ -77,10 +79,14 @@ img {
     /* background-size: contain; */
     /* background-position: center bottom; */
 /* } */
+.hero .hero-content{
+    width: 100%;
+}
 
 .hero .hero-heading{
     text-align: center;
     padding-bottom: 20px;
+    vertical-align: center;
 }
 
 .hero .hero-heading1{
@@ -89,7 +95,7 @@ img {
 
 .hero .hero-heading2{
     vertical-align: center;
-    color: #FFCE1B;
+    color: var(--effect-yellow);
 }
 
 .hero .hero-image-face {
@@ -110,23 +116,32 @@ img {
 }
 
 .hero .hero-text{
-    width: 70%;
+    width: 100%;
+    text-align: center;
     color: var(--light-color);
 }
 
 
 /* More About */
 .more-about {
-    padding-bottom: 20px;
+    padding-top: 35px;
+    padding-bottom: 45px;
 }
 .more-about-content{
     text-align: center;
 }
 
-.btn-more-about{
-    font-size: 1.5rem;
+.more-about .btn-more-about{
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 1.25rem;
+    transition: 0.5s;
 }
 
+.more-about .btn-more-about:hover {
+    background-color: var(--effect-yellow);
+    color: var(--dark-color);
+}
 /* Video */
 
 .video{
@@ -143,6 +158,34 @@ img {
     margin-bottom: 20px;
 }
 
+/* Parallax */
+
+.parallax .pimg{
+    position:relative;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../images/00364-lut-forest-faces.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+
+.parallax .pimg .container .parallax-title{
+    margin-top: 200px;
+    padding: 50px 0px 0px 0px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+
+.parallax .parallax-p{
+    text-align:center;
+    padding: 10px 80px 50px;
+    background-color: var(--primary-color);
+}
+
+
 /* Testimonial */
 
 .testimonials {
@@ -153,6 +196,7 @@ img {
     width: 700px;
     margin-bottom: 40px;
 }
+
 
 .testimonials-grid{
     display: grid;
@@ -263,6 +307,8 @@ img {
     color: #fff;
 }
 
+/* Footer */
+
 .footer {
     padding: 40px 0;
 
@@ -301,7 +347,28 @@ img {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 20px 0;
+    margin: 10px 0;
+}
+.footer input[type="name"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.footer input[type="text"] {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    margin: 10px 0;
+  }
+
+.fab .fa-facebook{
+    font-size: 90px;
 }
 
 /* Utility classes */
@@ -452,8 +519,8 @@ img {
     width: 250px;
     height: 100%;
     z-index: 100;
-    background: #fff;
-    box-shadow: 0px +px 10px rgba(0,0,0,0.2);
+    background: var(--backgound-color);
+    box-shadow: 0px +px 10px rgba(255, 254, 254, 0.2);
     transition: right 0.3s ease-in-out;
 
 }
@@ -484,7 +551,11 @@ img {
         font-size: 2.5rem;
     }
 }
-
+@media (min-width: 675px) {
+    .mobile-menu{
+        display: none
+    }
+}
 @media (max-width: 675px) {
 
     /* Navbar */
@@ -495,6 +566,8 @@ img {
     .navbar .hamburger-button {
         display: block;
     }
+
+    
 
     /* Hero */
     .hero .container {
