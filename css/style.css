@@ -142,47 +142,42 @@ img {
     background-color: var(--effect-yellow);
     color: var(--dark-color);
 }
-/* Video */
-
-.video{
-    padding: 10px 0 40px;
-}
-
-.video-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.video-preview{
-    margin-bottom: 20px;
-}
 
 /* Parallax */
 
 .parallax .pimg{
+    display:flex;
+    align-items: center;
+    justify-items:center;
     position: relative;
     background-position: center;
     background-size: cover;
     background-image: url("../images/00364-lut-forest-faces.jpg");
     background-repeat: no-repeat;
     height: 100vh;
+    width: auto;
     background-attachment: fixed;
 }
 
-
-.parallax .pimg .container .parallax-title{
-    margin-top: 200px;
-    padding: 50px 0px 0px 0px;
-    vertical-align: middle;
-    text-align: center;
+.parallax .parallax-container{
+    width: 100%;
     background-color: var(--primary-color);
 }
 
+.parallax .parallax-title{
+    padding: 20px 0 0 0;
+    /* vertical-align: middle; */
+    text-align: center;
+}
+
 .parallax .parallax-p{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
     text-align:center;
     padding: 10px 50px 20px;
-    background-color: var(--primary-color);
+    
+    
 }
 
 /* Careers */
@@ -191,6 +186,7 @@ img {
 }
 
 .careers .careers-heading{
+    text-align: center;
     width: 700px;
     margin-bottom: 40px;
     color: var(--light-color);    
@@ -198,6 +194,9 @@ img {
 
 
 .careers-grid{
+    margin-left: 50px;
+    margin-right: 50px;
+    /* text-align: center; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
@@ -220,126 +219,6 @@ img {
     text-align: center;
 }
 
-/* Testimonial */
-
-.testimonials {
-    padding: 40px 0;
-}
-
-.testimonials .testimonials-heading{
-    width: 700px;
-    margin-bottom: 40px;
-}
-
-
-.testimonials-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.testimonials .card p:nth-child(2){
-    margin-top: 30px;
-    font-weight: bold;
-}
-
-/* Pricing */
-.pricing .pricing-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.pricing .pricing-card-subheading{
-    margin-bottom: 30px;
-
-}
-
-.pricing .pricing-card-price{
-    margin-bottom: 30px;
-    padding: 20px 0;
-    border-bottom: 1px solid #ccc;
-}
-
-.pricing ul {
-    margin: 30px 0;
-}
-
-.pricing ul li {
-    margin-bottom: 20px;
-}
-
-.pricing ul li i{
-    margin-right: 10px;
-}
-
-.pricing .pricing-footer{
-    margin: 30px 0;
-}
-
-
-/* FAQ */
-
-.faq{
-    padding: 40px;
-}
-
-.faq .faq-group{
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
-}
-
-.faq .faq-group .faq-group-header{
-    padding: 20px 0;
-    margin-bottom: 15px;
-    position: relative;
-}
-
-.faq .faq-group .faq-group-header h4{
-    font-weight: 600;
-    width: 95%;
-}
-
-.faq .faq-group .faq-group-header i{
-    position: absolute;
-    right: 0;
-    top: 35px;
-    font-size: 1.3rem;
-    cursor: pointer;
-}
-
-.faq .faq-group .faq-group-body{
-    display: none;
-}
-
-.faq .faq-group .faq-group-body.open{
-    display: block;
-}
-
-.faq ul.faq-menu {
-    max-width: 400px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #ddd;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.faq ul.faq-menu li {
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.faq ul.faq-menu li.active {
-    background: var(--primary-color);
-    color: #fff;
-}
 
 /* Footer */
 
@@ -369,6 +248,7 @@ img {
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 30px;
     justify-content: center;
+    justify-items: center;
     align-items: center;
 }
 
@@ -626,9 +506,8 @@ img {
     }
 
 
-    /* Testimonials */
-    .careers .careers-heading,
-    .testimonials .testimonials-heading {
+    /* Careers */
+    .careers .careers-heading {
         max-width: 100%;
         text-align: center;
     }
@@ -640,9 +519,7 @@ img {
         margin-right: auto;
     }
 
-    .careers .careers-grid,
-    .testimonials .testimonials-grid, 
-    .pricing .pricing-grid,
+    .careers .careers-grid, 
     .footer .footer-grid {
         grid-template-columns: 1fr;
     }
